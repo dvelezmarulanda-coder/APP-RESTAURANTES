@@ -171,7 +171,7 @@ export default function AdminDashboard() {
                                 <div className="bg-white p-4 rounded-xl mx-auto w-fit mb-4">
                                     <QRCodeCanvas
                                         id="qr-canvas"
-                                        value={origin || (typeof window !== "undefined" ? window.location.origin : "") || "https://app-restaurantes.vercel.app"}
+                                        value={origin ? (origin.startsWith('http') ? origin : `https://${origin}`).replace(/\/?$/, '/') : "https://app-restaurantes.vercel.app/"}
                                         size={200}
                                         level={"H"}
                                         includeMargin={true}
@@ -179,7 +179,7 @@ export default function AdminDashboard() {
                                 </div>
                                 
                                 <p className="text-[10px] font-mono text-white/40 mb-6 truncate max-w-full italic px-2">
-                                    Destino: {origin || "Cargando..."}/
+                                    Enlace: {(origin ? (origin.startsWith('http') ? origin : `https://${origin}`).replace(/\/?$/, '/') : "Cargando...") }
                                 </p>
 
                                 <button
