@@ -166,17 +166,21 @@ export default function AdminDashboard() {
 
                             <div className="text-center">
                                 <h2 className="text-2xl font-bold text-white mb-2">Código QR</h2>
-                                <p className="text-white/90 mb-6 text-sm">Escanea para ir a la encuesta</p>
+                                <p className="text-white/90 mb-4 text-sm">Escanea para ir a la encuesta</p>
 
-                                <div className="bg-white p-4 rounded-xl mx-auto w-fit mb-6">
+                                <div className="bg-white p-4 rounded-xl mx-auto w-fit mb-4">
                                     <QRCodeCanvas
                                         id="qr-canvas"
-                                        value={origin}
+                                        value={origin || (typeof window !== "undefined" ? window.location.origin : "") || "https://app-restaurantes.vercel.app"}
                                         size={200}
                                         level={"H"}
                                         includeMargin={true}
                                     />
                                 </div>
+                                
+                                <p className="text-[10px] font-mono text-white/40 mb-6 truncate max-w-full italic px-2">
+                                    Destino: {origin || "Cargando..."}/
+                                </p>
 
                                 <button
                                     onClick={downloadQR}
