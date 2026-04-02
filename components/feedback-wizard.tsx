@@ -139,12 +139,15 @@ export function FeedbackWizard() {
 
                 <div className="space-y-1">
                     <h1 className="text-3xl font-bold tracking-tight text-white/95">
-                        {step === "RATING" ? "Califica Tu Experiencia" : "Detalles"}
+                        {step === "RATING" 
+                            ? "Califica Tu Experiencia" 
+                            : isPositive 
+                                ? "¿Qué fue lo que más te gustó?" 
+                                : "¿Cómo podemos mejorar?"}
                     </h1>
                     <p className="text-white/50 text-sm font-medium tracking-wide">
                         {step === "RATING" && "Por favor, califica tu visita de hoy."}
-                        {step === "DETAILS" && isPositive && "¿Qué fue lo que más te gustó?"}
-                        {step === "DETAILS" && !isPositive && "¿Qué salió mal hoy?"}
+                        {step === "DETAILS" && !isPositive && "Sentimos mucho que tu visita no haya sido perfecta."}
                     </p>
                 </div>
             </div>
