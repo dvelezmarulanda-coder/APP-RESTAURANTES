@@ -5,7 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Flash Feedback",
+  title: "CALIFICA TU EXPERIENCIA",
+
   description: "Instant customer feedback for restaurants.",
 };
 
