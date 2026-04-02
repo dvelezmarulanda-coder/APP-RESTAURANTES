@@ -17,7 +17,7 @@ export function FeedbackContainer({ children, className, ...props }: FeedbackCon
         >
             {/* Premium Background Layer */}
             <div 
-                className="absolute inset-0 bg-[url('/images/bg-premium.png')] bg-cover bg-center bg-no-repeat opacity-60 scale-105" 
+                className="absolute inset-0 bg-[url('/images/bg-elegant.png')] bg-cover bg-center bg-no-repeat opacity-60 scale-105" 
                 style={{ filter: 'brightness(0.7) contrast(1.2)' }}
             />
             
