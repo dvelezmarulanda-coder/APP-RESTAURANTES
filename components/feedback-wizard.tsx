@@ -140,7 +140,7 @@ export function FeedbackWizard() {
                     </div>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-3">
                     <h1 className="text-3xl font-bold tracking-tight text-white leading-tight">
                         {step === "RATING" 
                             ? "Califica Tu Experiencia" 
@@ -148,7 +148,7 @@ export function FeedbackWizard() {
                                 ? "¿Qué fue lo que más te gustó?" 
                                 : "¿Cómo podemos mejorar?"}
                     </h1>
-                    <p className="text-white/40 text-sm font-medium tracking-wide">
+                    <p className="text-white/60 text-base font-medium tracking-wide max-w-[90%] mx-auto">
                         {step === "RATING" && "Ayúdanos a brindarte un mejor servicio cada día."}
                         {step === "DETAILS" && !isPositive && "Valoramos mucho tu honestidad."}
                     </p>

@@ -14,7 +14,7 @@ export function StarRating({ rating, onRatingChange, maxStars = 5 }: StarRatingP
     const [hoverRating, setHoverRating] = React.useState<number>(0);
 
     return (
-        <div className="flex flex-col items-center gap-4 py-8 relative">
+        <div className="flex flex-col items-center gap-2 py-4 relative">
             <div className="flex gap-4 justify-center">
                 {Array.from({ length: maxStars }).map((_, i) => {
                     const starValue = i + 1;
