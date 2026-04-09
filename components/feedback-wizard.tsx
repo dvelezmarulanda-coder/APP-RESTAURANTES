@@ -135,8 +135,8 @@ export function FeedbackWizard() {
         <div className="w-full mx-auto">
             <div className="text-center mb-10 space-y-4">
                 <div className="flex justify-center mb-6 transition-all duration-700 hover:rotate-6">
-                    <div className="p-5 bg-primary/10 rounded-3xl shadow-sm border border-primary/5">
-                        <Zap className="w-10 h-10 text-primary fill-primary/20 drop-shadow-sm" />
+                    <div className="p-5 bg-[#8B0000]/10 rounded-3xl shadow-sm border border-[#8B0000]/5">
+                        <Zap className="w-10 h-10 text-[#8B0000] fill-[#8B0000]/20 drop-shadow-sm" />
                     </div>
                 </div>
 
@@ -187,7 +187,7 @@ export function FeedbackWizard() {
                             onChange={(e) => setComment(e.target.value)}
                             placeholder={isPositive ? "Todo estuvo excelente..." : "La comida demoró un poco..."}
                             required={false}
-                            className="w-full bg-secondary/50 border border-border rounded-3xl p-5 min-h-[130px] text-foreground placeholder:text-muted-foreground/40 focus:ring-2 focus:ring-primary/20 focus:border-primary/50 focus:outline-none resize-none transition-all shadow-sm"
+                            className="w-full bg-[#f0f0f0] border border-[#e0e0e0] rounded-[24px] p-5 min-h-[130px] text-[#1a1a1a] placeholder:text-[#666666]/40 focus:ring-2 focus:ring-[#8B0000]/20 focus:border-[#8B0000]/50 focus:outline-none resize-none transition-all shadow-sm"
                         />
                     </div>
 
@@ -200,7 +200,7 @@ export function FeedbackWizard() {
                                     type="button"
                                     disabled={isSubmitting}
                                     onClick={() => submitSurvey(false)}
-                                    className="w-full py-4 rounded-3xl font-bold text-lg text-primary bg-primary/5 hover:bg-primary/10 border border-primary/10 transition-all flex items-center justify-center gap-3 active:scale-95"
+                                    className="w-full py-4 rounded-[24px] font-bold text-lg text-[#8B0000] bg-[#8B0000]/5 hover:bg-[#8B0000]/10 border border-[#8B0000]/10 transition-all flex items-center justify-center gap-3 active:scale-95"
                                 >
                                     <MessageSquare className="w-5 h-5" /> Enviar Comentarios
                                 </button>
@@ -212,9 +212,9 @@ export function FeedbackWizard() {
                                         disabled={isSubmitting}
                                         onClick={() => submitSurvey(true)}
                                         className={cn(
-                                            "w-full py-4 rounded-3xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3",
-                                            "bg-primary text-white hover:brightness-110 active:scale-95",
-                                            "shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30",
+                                            "w-full py-4 rounded-[24px] font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3",
+                                            "bg-[#8B0000] text-white hover:brightness-110 active:scale-95",
+                                            "shadow-lg shadow-[#8B0000]/10 hover:shadow-xl hover:shadow-[#8B0000]/20",
                                             isSubmitting && "opacity-50 cursor-not-allowed"
                                         )}
                                     >
@@ -232,9 +232,9 @@ export function FeedbackWizard() {
                                 type="submit"
                                 disabled={isSubmitting || selectedTags.length === 0}
                                 className={cn(
-                                    "w-full py-4 rounded-3xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3",
-                                    "bg-primary text-white hover:brightness-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed",
-                                    "shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30",
+                                    "w-full py-4 rounded-[24px] font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3",
+                                    "bg-[#8B0000] text-white hover:brightness-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed",
+                                    "shadow-lg shadow-[#8B0000]/10 hover:shadow-xl hover:shadow-[#8B0000]/20",
                                     (isSubmitting || selectedTags.length === 0) && "shadow-none"
                                 )}
                             >

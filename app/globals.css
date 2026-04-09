@@ -3,40 +3,31 @@
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
 
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #F9F9F9;
+  --color-foreground: #1a1a1a;
 
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: #8B0000;
+  --color-primary-foreground: #ffffff;
 
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: #f0f0f0;
+  --color-secondary-foreground: #1a1a1a;
 
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: #e5e5e5;
+  --color-muted-foreground: #666666;
 
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: #FFCC00;
+  --color-accent-foreground: #1a1a1a;
 
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
 
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
+  --color-border: #e0e0e0;
+  --color-input: #e0e0e0;
+  --color-ring: #8B0000;
 
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-
-  /* Custom Feedback Colors */
-  --color-sentiment-positive: var(--sentiment-positive);
-  --color-sentiment-negative: var(--sentiment-negative);
-
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+  --radius-lg: 1.5rem;
+  --radius-md: 1.25rem;
+  --radius-sm: 0.75rem;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -48,60 +39,27 @@
   }
 
   @keyframes accordion-down {
-    from {
-      height: 0
-    }
-
-    to {
-      height: var(--radix-accordion-content-height)
-    }
+    from { height: 0 }
+    to { height: var(--radix-accordion-content-height) }
   }
 
   @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height)
-    }
-
-    to {
-      height: 0
-    }
+    from { height: var(--radix-accordion-content-height) }
+    to { height: 0 }
   }
 }
 
 :root {
-  /* Premium Light Theme Palette */
-  --background: 0 0% 98%;    /* #F9F9F9 - Crema */
-  --foreground: 0 0% 10%;    /* #1A1A1A - Dark Grey for text */
-
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 10%;
-
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 10%;
-
-  --primary: 0 100% 27%;     /* #8B0000 - Rojo Borgoña */
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 0 0% 92%;
-  --secondary-foreground: 0 0% 10%;
-
-  --muted: 0 0% 92%;
-  --muted-foreground: 0 0% 40%;
-
-  --accent: 48 100% 50%;     /* #FFCC00 - Amarillo Mostaza */
-  --accent-foreground: 0 0% 10%;
-
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 100%;
-
-  --border: 0 0% 88%;
-  --input: 0 0% 88%;
-  --ring: 0 100% 27%;
-
-  --radius: 1.5rem;          /* 24px - 3xl approach */
-
-  --sentiment-positive: 142 71% 45%;
-  --sentiment-negative: 0 100% 27%; /* Using Burgundy for negative too or keeping red */
+  --background: #F9F9F9;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --primary: #8B0000;
+  --primary-foreground: #ffffff;
+  --accent: #FFCC00;
+  --accent-foreground: #1a1a1a;
+  --border: #e0e0e0;
+  --radius: 1.5rem;
 }
 
 /* Removed forced dark mode to allow the new light theme */
