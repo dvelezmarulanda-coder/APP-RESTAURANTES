@@ -23,8 +23,8 @@ export function TagButton({
                 "px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border",
                 "active:scale-95 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary",
                 selected
-                    ? "bg-primary text-white border-primary shadow-md font-bold transform scale-105" 
-                    : "bg-background text-foreground border-border hover:border-primary/40 hover:text-primary hover:bg-white hover:shadow-sm",
+                    ? "bg-[#FFCC00] text-black border-[#FFCC00] shadow-[0_0_20px_rgba(255,204,0,0.3)] font-bold transform scale-105" 
+                    : "bg-white/5 text-white/50 border-white/10 hover:border-[#FFCC00]/40 hover:text-white hover:bg-white/10",
                 className
             )}
             {...props}

@@ -100,17 +100,17 @@ export function FeedbackWizard() {
     if (step === "SUBMITTED") {
         return (
             <div className="text-center space-y-6 animate-in fade-in zoom-in duration-500 py-8">
-                <div className="w-24 h-24 bg-primary/5 rounded-full flex items-center justify-center mx-auto ring-1 ring-primary/20">
-                    <span className="text-6xl drop-shadow-[0_0_15px_rgba(255,204,0,0.5)]">
+                <div className="w-24 h-24 bg-white/5 rounded-full flex items-center justify-center mx-auto ring-1 ring-white/10">
+                    <span className="text-6xl drop-shadow-[0_0_20px_rgba(255,204,0,0.5)]">
                         {isPositive ? "⭐" : "🎁"}
                     </span>
                 </div>
 
                 <div className="space-y-2">
-                    <h2 className="text-3xl font-bold tracking-tight text-foreground">
+                    <h2 className="text-3xl font-bold tracking-tight text-white leading-tight">
                         {isPositive ? "¡Gracias por tu apoyo!" : "¡Gracias por ayudarnos!"}
                     </h2>
-                    <p className="text-muted-foreground max-w-[80%] mx-auto">
+                    <p className="text-white/60 max-w-[80%] mx-auto font-medium">
                         {isPositive
                             ? "Tus comentarios nos ayudan muchísimo a seguir mejorando."
                             : "Lamentamos que no haya sido perfecto. Aquí tienes un detalle para la próxima:"}
@@ -135,22 +135,22 @@ export function FeedbackWizard() {
         <div className="w-full mx-auto">
             <div className="text-center mb-10 space-y-4">
                 <div className="flex justify-center mb-6 transition-all duration-700 hover:rotate-6">
-                    <div className="p-5 bg-[#8B0000]/10 rounded-3xl shadow-sm border border-[#8B0000]/5">
-                        <Zap className="w-10 h-10 text-[#8B0000] fill-[#8B0000]/20 drop-shadow-sm" />
+                    <div className="p-5 bg-[#FFCC00]/10 rounded-3xl shadow-lg border border-[#FFCC00]/20 ring-1 ring-[#FFCC00]/10">
+                        <Zap className="w-10 h-10 text-[#FFCC00] fill-[#FFCC00]/20 drop-shadow-[0_0_10px_rgba(255,204,0,0.4)]" />
                     </div>
                 </div>
 
                 <div className="space-y-2">
-                    <h1 className="text-3xl font-bold tracking-tight text-foreground leading-tight">
+                    <h1 className="text-3xl font-bold tracking-tight text-white leading-tight">
                         {step === "RATING" 
                             ? "Califica Tu Experiencia" 
                             : isPositive 
                                 ? "¿Qué fue lo que más te gustó?" 
                                 : "¿Cómo podemos mejorar?"}
                     </h1>
-                    <p className="text-muted-foreground text-sm font-medium tracking-wide">
-                        {step === "RATING" && "Permítenos conocer tu opinión sobre hoy."}
-                        {step === "DETAILS" && !isPositive && "Sentimos que tu visita no haya sido ideal."}
+                    <p className="text-white/40 text-sm font-medium tracking-wide">
+                        {step === "RATING" && "Ayúdanos a brindarte un mejor servicio cada día."}
+                        {step === "DETAILS" && !isPositive && "Valoramos mucho tu honestidad."}
                     </p>
                 </div>
             </div>
@@ -179,7 +179,7 @@ export function FeedbackWizard() {
 
                     {/* Comment Section */}
                     <div className="space-y-3">
-                        <label className="text-sm font-bold ml-1 text-foreground/80 lowercase first-letter:uppercase">
+                        <label className="text-sm font-bold ml-1 text-white/50 lowercase first-letter:uppercase">
                             {isPositive ? "Déjanos un comentario (Opcional)" : "¿Quieres detallar algo más? (Opcional)"}
                         </label>
                         <textarea
@@ -187,7 +187,7 @@ export function FeedbackWizard() {
                             onChange={(e) => setComment(e.target.value)}
                             placeholder={isPositive ? "Todo estuvo excelente..." : "La comida demoró un poco..."}
                             required={false}
-                            className="w-full bg-[#f0f0f0] border border-[#e0e0e0] rounded-[24px] p-5 min-h-[130px] text-[#1a1a1a] placeholder:text-[#666666]/40 focus:ring-2 focus:ring-[#8B0000]/20 focus:border-[#8B0000]/50 focus:outline-none resize-none transition-all shadow-sm"
+                            className="w-full bg-white/5 border border-white/10 rounded-[24px] p-5 min-h-[130px] text-white placeholder:text-white/20 focus:ring-2 focus:ring-[#FFCC00]/20 focus:border-[#FFCC00]/50 focus:outline-none resize-none transition-all shadow-inner"
                         />
                     </div>
 
@@ -200,7 +200,7 @@ export function FeedbackWizard() {
                                     type="button"
                                     disabled={isSubmitting}
                                     onClick={() => submitSurvey(false)}
-                                    className="w-full py-4 rounded-[24px] font-bold text-lg text-[#8B0000] bg-[#8B0000]/5 hover:bg-[#8B0000]/10 border border-[#8B0000]/10 transition-all flex items-center justify-center gap-3 active:scale-95"
+                                    className="w-full py-4 rounded-[24px] font-bold text-lg text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all flex items-center justify-center gap-3 active:scale-95"
                                 >
                                     <MessageSquare className="w-5 h-5" /> Enviar Comentarios
                                 </button>
@@ -213,8 +213,8 @@ export function FeedbackWizard() {
                                         onClick={() => submitSurvey(true)}
                                         className={cn(
                                             "w-full py-4 rounded-[24px] font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3",
-                                            "bg-[#8B0000] text-white hover:brightness-110 active:scale-95",
-                                            "shadow-lg shadow-[#8B0000]/10 hover:shadow-xl hover:shadow-[#8B0000]/20",
+                                            "bg-[#FFCC00] text-black hover:brightness-110 active:scale-95",
+                                            "shadow-xl shadow-[#FFCC00]/20 hover:shadow-2xl hover:shadow-[#FFCC00]/30",
                                             isSubmitting && "opacity-50 cursor-not-allowed"
                                         )}
                                     >
@@ -234,7 +234,7 @@ export function FeedbackWizard() {
                                 className={cn(
                                     "w-full py-4 rounded-[24px] font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3",
                                     "bg-[#8B0000] text-white hover:brightness-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed",
-                                    "shadow-lg shadow-[#8B0000]/10 hover:shadow-xl hover:shadow-[#8B0000]/20",
+                                    "shadow-xl shadow-[#8B0000]/20 hover:shadow-2xl hover:shadow-[#8B0000]/30",
                                     (isSubmitting || selectedTags.length === 0) && "shadow-none"
                                 )}
                             >
