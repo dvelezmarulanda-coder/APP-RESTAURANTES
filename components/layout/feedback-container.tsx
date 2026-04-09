@@ -17,7 +17,7 @@ export function FeedbackContainer({ children, className, ...props }: FeedbackCon
         >
             {/* Soft Red Background with Silhouettes (Blurred) */}
             <div 
-                className="absolute inset-0 bg-[url('/images/bg-fastfood.png')] bg-repeat opacity-[0.2] scale-100 pointer-events-none blur-[1.5px]" 
+                className="absolute inset-0 bg-[url('/images/bg-fastfood.png')] bg-repeat opacity-[0.2] scale-100 pointer-events-none blur-[0.8px]" 
                 style={{ backgroundSize: '250px' }}
             />
             
