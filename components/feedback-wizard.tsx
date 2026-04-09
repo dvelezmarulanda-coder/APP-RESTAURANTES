@@ -177,13 +177,13 @@ export function FeedbackWizard() {
                     {/* Comment Section */}
                     <div className="space-y-3">
                         <label className="text-base font-medium ml-1 text-white/90">
-                            {isPositive ? "Déjanos un comentario (Opcional)" : "Cuéntanos más detalles (Importante)"}
+                            {isPositive ? "Déjanos un comentario (Opcional)" : "¿Quieres detallar algo más? (Opcional)"}
                         </label>
                         <textarea
                             value={comment}
                             onChange={(e) => setComment(e.target.value)}
                             placeholder={isPositive ? "Todo estuvo genial..." : "La carne estaba un poco..."}
-                            required={!isPositive} // Required only for negative feedback
+                            required={false}
                             className="w-full bg-[#2a2a2e] border border-white/20 rounded-xl p-4 min-h-[120px] text-white placeholder:text-white/40 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none resize-none transition-all shadow-inner"
                         />
                     </div>
@@ -227,12 +227,12 @@ export function FeedbackWizard() {
                             /* Negative Sentiment - Single Action */
                             <button
                                 type="submit"
-                                disabled={isSubmitting}
+                                disabled={isSubmitting || selectedTags.length === 0}
                                 className={cn(
                                     "w-full py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3",
-                                    "bg-primary text-white hover:brightness-110 active:scale-95",
+                                    "bg-primary text-white hover:brightness-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:grayscale-[0.5]",
                                     "shadow-[0_0_30px_rgba(230,184,0,0.4)] hover:shadow-[0_0_40px_rgba(230,184,0,0.6)]",
-                                    isSubmitting && "opacity-50 cursor-not-allowed"
+                                    (isSubmitting || selectedTags.length === 0) && "shadow-none"
                                 )}
                             >
                                 {isSubmitting ? "Enviando..." : (
