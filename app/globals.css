@@ -69,53 +69,42 @@
 }
 
 :root {
-  /* Premium Dark Mode Defaults */
-  --background: 0 0% 7%;
-  /* #121212 */
-  --foreground: 0 0% 100%;
-  /* #FFFFFF */
+  /* Premium Light Theme Palette */
+  --background: 0 0% 98%;    /* #F9F9F9 - Crema */
+  --foreground: 0 0% 10%;    /* #1A1A1A - Dark Grey for text */
 
-  --card: 0 0% 9%;
-  /* #171717 - Subtle definition */
-  --card-foreground: 0 0% 100%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
 
-  --popover: 0 0% 9%;
-  --popover-foreground: 0 0% 100%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 10%;
 
-  --primary: 45 93% 47%;
-  /* #E6B800 - Premium Gold */
-  --primary-foreground: 0 0% 0%;
+  --primary: 0 100% 27%;     /* #8B0000 - Rojo Borgoña */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 13%;
-  --secondary-foreground: 0 0% 100%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 10%;
 
-  --muted: 0 0% 13%;
-  --muted-foreground: 0 0% 80%;
-  /* #CCCCCC */
+  --muted: 0 0% 92%;
+  --muted-foreground: 0 0% 40%;
 
-  --accent: 45 93% 47%;
-  --accent-foreground: 0 0% 0%;
+  --accent: 48 100% 50%;     /* #FFCC00 - Amarillo Mostaza */
+  --accent-foreground: 0 0% 10%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 0 0% 20%;
-  --input: 0 0% 20%;
-  --ring: 45 93% 47%;
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
+  --ring: 0 100% 27%;
 
-  --radius: 0.75rem;
+  --radius: 1.5rem;          /* 24px - 3xl approach */
 
   --sentiment-positive: 142 71% 45%;
-  --sentiment-negative: 349 84% 60%;
+  --sentiment-negative: 0 100% 27%; /* Using Burgundy for negative too or keeping red */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    /* Force Dark Mode */
-    --background: 0 0% 7%;
-    --foreground: 0 0% 100%;
-  }
-}
+/* Removed forced dark mode to allow the new light theme */
 
 body {
   background-color: var(--background);
