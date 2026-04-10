@@ -250,7 +250,7 @@ export function FeedbackWizard() {
                             type="button"
                             onClick={() => setStep("RATING")}
                             className="w-full text-sm font-semibold text-muted-foreground hover:text-primary transition-colors pt-2"
-                        >
+                          >
                             Volver
                         </button>
                     </div>
