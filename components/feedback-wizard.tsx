@@ -14,7 +14,7 @@ type Sentiment = "POSITIVE" | "NEGATIVE";
 const POSITIVE_TAGS = ["Buena Comida", "Excelente Servicio", "Ambiente", "Rapidez", "Bebidas"];
 const NEGATIVE_TAGS = ["Tiempo de Espera", "Comida Fría", "Atención", "Ruido", "Precio"];
 
-// Deployment Trigger: environment variables updated in Vercel.
+// Deployment Trigger: env variables updated in Vercel - Redeploying.
 
 export function FeedbackWizard() {
     const [step, setStep] = React.useState<FeedbackStep>("RATING");
