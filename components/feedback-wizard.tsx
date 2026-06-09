@@ -60,22 +60,25 @@ export function FeedbackWizard() {
             created_at: new Date().toISOString(),
         };
 
-        console.log("Submitting Payload to DB:", payload);
+        console.log("Submitting Payload to API:", payload);
 
         try {
-            const { data, error } = await supabase
-                .from('feedback_entries')
-                .insert([payload])
-                .select();
+            const response = await fetch('/api/feedback', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
 
-            if (error) {
-                console.error("Supabase Error:", error);
-                alert("Hubo un error al enviar tu feedback. Por favor intenta de nuevo.");
+            const result = await response.json();
+
+            if (!response.ok) {
+                console.error("API Error:", result);
+                alert("Hubo un error al enviar tu feedback: " + (result.error || "Error desconocido"));
                 setIsSubmitting(false);
                 return;
             }
 
-            console.log("Successfully saved:", data);
+            console.log("Successfully saved:", result.data);
         } catch (err) {
             console.error("Unexpected error:", err);
             alert("Hubo un error inesperado. Por favor intenta de nuevo.");
